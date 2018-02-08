@@ -1,0 +1,53 @@
+body {
+    font-family: "Press Start 2P";
+    font-size: 1.75rem;
+    background-color: black;
+    margin: 0px;
+    overflow: hidden;
+    color: white;
+    padding: 2rem;
+}
+h2 {
+    color: white;
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+
+.rules {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+.rules-label {
+    display: inline;
+    margin-left: 2rem;
+}
+
+.rule-char {
+    display: none;
+}
+
+.rules .rule-char {
+    display: inline;
+    //animation: zoomin 3s ease-out;
+}
+
+.rules .rule-go {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: zoomin 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes _zoomin {
+  0% {font-size: 2000%};
+  50% {font-size: 250%};
+  100% {font-size: 100%};
+}
+
+@keyframes zoomin {
+  0% {transform: scale(7.5); opacity: 1;};
+  100% {transform: scale(1)};
+}

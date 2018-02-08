@@ -1,4 +1,6 @@
-# Langton's Ant in 3D
+Langton's Ant in 3D
+
+Check out the [demo](https://realyze.github.io/1718/index.html).
 
 [Langton's Ant](https://en.wikipedia.org/wiki/Langton%27s_ant) is a universal Turing machine with very simple rules but surprisingly complex emergent behaviour.
 
@@ -11,7 +13,7 @@ Contains hacks and sad failed attempt to use basic linear algebra. You must be a
 
 ## Usage
 1. Open `index.html` in your browser.
-2. Enter rules into the rule box (a sequence of LRUD letter describing which direction should the ant go when it encounters a previously visited spot).
-3. Press "start"
+2. Enter ant rules (a sequence of LRUD letters)
+3. Press "g" to go!
 4. ???
 5. PROFIT

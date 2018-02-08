@@ -5,46 +5,34 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
-			body {
-				font-family: Monospace;
-				background-color: black;
-				margin: 0px;
-				overflow: hidden;
-				color: white;
+			@font-face {
+				font-family: "Press Start 2P";
+				src: url(./ps2p.ttf);
 			}
-			h1 {
-				color: white;
-				padding: 1rem;
-			}
-			#c {
-				position: absolute;
-				top: 7.5rem;
-				left: 5rem;
-			}
-			#r {
-				width: 10rem;
-			}
-			input {
-				margin-top: 0.5rem;
-			}
-			#b {
-
-			}
+		</style>
+		<link href="./ant.css" rel="stylesheet">
+		<style>
 		</style>
 	</head>
 	<body>
-		<h1>Langton's Ant in 3D</h1>
-		<div id="c">
-			<div>Enter ant rules (L/R/U/D letters):</div>
-			<input type="text" id="r" value="RUL"/>
-			<button id="b">start</button>
-			<button id="b2">stop</button>
-		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
-		<script type="text/javascript" src="./output.js"></script>
+		<h2>Langton's Ant in 3D</h2>
+		<div id="rl" class="rule-char">L</div>
+		<div id="rr" class="rule-char">R</div>
+		<div id="rd" class="rule-char">D</div>
+		<div id="ru" class="rule-char">U</div>
+		<div id="rg" class="rule-char rule-go">GO!</div>
+		<div class="rules-label">Ant name:</div>
+		<div class="rules" id="rs"></div>
+
+		<script src="./three.min.js"></script>
+		<script type="text/javascript" src="./ant.js"></script>
 		<script>
-			document.getElementById('b').addEventListener('click', s);
-			document.getElementById('b2').addEventListener('click', () => window.s1 = 1);
+			// Interesting ones:
+			// RLRDUL
+			// RRDDULDRU
+			// LLRUDRUL
+			// LLDRU
 		</script>
 	</body>
 </html>
+
