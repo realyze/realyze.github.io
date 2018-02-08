@@ -11,7 +11,7 @@
     z: 0,
   }
   , plane = 'xz', rules = [], colors, d = document, i = d.getElementById.bind(d),
-  camera, scene, renderer, radius = 100, theta = 0, a,
+  camera, scene, renderer, radius = 100, theta = 0,
   rotateUp = ({ x, y, z }) => {
     if (plane == 'xz') {
       plane = (x == 1 || x == -1) ? 'yz' : 'xy';
@@ -97,7 +97,8 @@
     camera.updateMatrixWorld();
     renderer.render(scene, camera);
   },
-  p = (r) => r != 'g' && rules.push(r);
+  p = (r) => r != 'g' && rules.push(r),
+  a = new Audio('vc.mp3');
 
   d.addEventListener('keypress', (e) => {
     let k=e.key;
@@ -110,7 +111,6 @@
     colors = rules.map(() => m.random() * 0xffffff);
     init();
     animate();
-    a = new Audio('vc.mp3');
     a.play();
   };
 
